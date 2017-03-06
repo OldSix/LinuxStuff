@@ -1,0 +1,46 @@
+1. man pthread 
+sudo apt-get install manpages-posix manpages-posix-dev
+
+
+2. 编译链接 pthread math libcur
+
+gcc a.c -lpthead -lm -lrt
+
+
+3.进程间通信
+
+（1）信号
+（2）锁 共享
+（3）mmap
+（4）管道
+（5）socket
+（6）共享内存
+（7）消息队列
+
+
+4. 读写速度
+
+	内存的读写速度 20GB/s，
+	SSD硬盘的读写速度100MB/s
+	一级缓存：450GB/s
+	二级缓存：230GB/s
+	三级缓存：170GB/s
+
+5.
+
+syslogd --- Linux下，后面+d的函数是指，一个后台进程
+
+（1）不会影响调试信息，即使主进程崩溃了，打印进程已经可以收到消息，后台进程依然可以打印调试信息
+（2）后台进程打印调试信息，不会影响到主进程的效率
+
+
+6.
+
+	/var/run/
+
+	crond.pid ---> 存储守护进程cron的进程号，用以保证cron的全局唯一性（单例）
+	O_CREAT|O_EXCL
+
+7.	
+	gcc消除未使用变量警告
+	void *thread_xx(__attribute__((unused))void *arg)
